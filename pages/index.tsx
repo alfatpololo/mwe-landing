@@ -1,4 +1,10 @@
 import Image from "next/image";
+import Ecommerce from "@/components/tabs/ecommerce";
+import Customwebsite from "@/components/tabs/custom-website";
+import Copywriting from "@/components/tabs/copywriting";
+import Companyprofile from "@/components/tabs/companyprofile";
+import Webdesign from "@/components/tabs/webdesign";
+import Tabbutton from "@/components/navigation/tabs-button/tabsbutton";
 
 export default function Home() {
   return (
@@ -116,15 +122,20 @@ export default function Home() {
       </div>
     </section>
 
+    <section id="sectionone">
+      <div className="mt-[192px]"></div>
+      <Tabbutton />
+    </section>
+
     <section id="sectiontwo">
-    <div className="container mx-auto justify-center px-[80] py-[182px]">
+    <div className="container mx-auto justify-center px-[80] pt-[182px]">
       <div className="grid grid-cols-3 gap-[24px] mb-[28px]">
         <div className="w-[456px]">
             <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Dilengkapi Semua Fitur yang Dibutuhkan Pada Website</h2>
             <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Buat Website E-Commerce dan Company Profilemu dengan Lebih Mudah bersama Berbagai Fitur Unggulan </p>
         </div>
         <div className="bg-gray-200 p-4 invisible">Column 2</div>
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
+        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px]">
           <div className="flex gap-[20px]">
               <div className="">
               <Image
@@ -135,7 +146,7 @@ export default function Home() {
                     alt=""
                   />
               </div>
-              <div className="w-[278px]">
+              <div className="w-full">
               <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
               <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
               </div>
@@ -144,7 +155,7 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-3 gap-[24px] mb-[28px]">
         <div className="bg-gray-200 p-4 invisible">Column 2</div>
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
+        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px]  ">
           <div className="flex gap-[20px]">
               <div className="">
               <Image
@@ -155,13 +166,13 @@ export default function Home() {
                     alt=""
                   />
               </div>
-              <div className="w-[278px]">
+              <div className="w-full">
               <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
               <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
               </div>
           </div>
         </div>
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
+        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px]  ">
           <div className="flex gap-[20px]">
               <div className="">
               <Image
@@ -172,7 +183,7 @@ export default function Home() {
                     alt=""
                   />
               </div>
-              <div className="w-[278px]">
+              <div className="w-full">
               <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
               <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
               </div>
@@ -180,7 +191,7 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-3 gap-[24px] mb-[28px]">       
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
+        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px]  ">
           <div className="flex gap-[20px]">
               <div className="">
               <Image
@@ -191,13 +202,13 @@ export default function Home() {
                     alt=""
                   />
               </div>
-              <div className="w-[278px]">
+              <div className="w-full">
               <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
               <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
               </div>
           </div>
         </div>
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
+        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px]  ">
           <div className="flex gap-[20px]">
               <div className="">
               <Image
@@ -208,14 +219,14 @@ export default function Home() {
                     alt=""
                   />
               </div>
-              <div className="w-[278px]">
+              <div className="w-full">
               <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
               <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
               </div>
           </div>
         </div>
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
-          <div className="flex mx-[20px]">
+        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px]  ">
+          <div className="flex gap-[20px]">
               <div className="">
               <Image
                     className=""
@@ -225,7 +236,7 @@ export default function Home() {
                     alt=""
                   />
               </div>
-              <div className="w-[278px]">
+              <div className="w-full">
               <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
               <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
               </div>
@@ -237,62 +248,155 @@ export default function Home() {
 
     <section id="sectionthree">
     <div className="container mx-auto justify-center px-[80] py-[182px]">
-      <div className="grid grid-cols-3 gap-[24px] mb-[28px]">
-        <div className="w-[456px]">
-            <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Dilengkapi Semua Fitur yang Dibutuhkan Pada Website</h2>
-            <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Buat Website E-Commerce dan Company Profilemu dengan Lebih Mudah bersama Berbagai Fitur Unggulan </p>
-        </div>
-        <div className="bg-gray-200 p-4 invisible">Column 2</div>
+      <div className="grid grid-cols-1 gap-[24px] mb-[40px]">
+        <div className="w-full">
+            <h2 className="text-secondary-black text-center text-[32px] font-notosans font-[600] leading-[52px]">Kami Telah Membantu Transformasi Digital <br /> Melalui Website Untuk Banyak Perusahaan!</h2>
+            </div>
       </div>
-      <div className="grid grid-cols-3 gap-[24px] mb-[28px]">       
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
-          <div className="flex gap-[20px]">
-              <div className="">
+      <div className="grid grid-cols-3 gap-[24px] mb-[24px]">       
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px]">
+          <div className="flex gap-[16px] space-x-3">
+              <div className="w-full">
               <Image
                     className=""
-                    width={65}
-                    height={64}
-                    src="/integration.svg"
+                    width={48}
+                    height={48}
+                    src="/iconkebunraya.svg"
                     alt=""
                   />
+                  <h2 className="text-secondary-black text-[16px] font-notosans font-[500] leading-[28px] mt-[12px]">Kebun Raya Nusantara</h2>
+                  <p className="text-secondary-grey-500 text-[14px] font-notosans font-[400] leading-[24px] mt-[8px]">Holding Perkebunan</p>
               </div>
-              <div className="w-[278px]">
-              <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
-              <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
+              <div className="ms-[16px] w-full">
+              <Image
+                    className="w-full"
+                    width={239}
+                    height={188}
+                    src="/portfoliokebunraya.svg"
+                    alt=""
+                  />
               </div>
           </div>
         </div>
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
-          <div className="flex gap-[20px]">
-              <div className="">
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px]">
+          <div className="flex gap-[16px]">
+              <div className="w-full">
               <Image
                     className=""
-                    width={65}
-                    height={64}
-                    src="/integration.svg"
+                    width={48}
+                    height={48}
+                    src="/iconkebunraya.svg"
                     alt=""
                   />
+                  <h2 className="text-secondary-black text-[16px] font-notosans font-[500] leading-[28px] mt-[12px]">Kebun Raya Nusantara</h2>
+                  <p className="text-secondary-grey-500 text-[14px] font-notosans font-[400] leading-[24px] mt-[8px]">Holding Perkebunan</p>
               </div>
-              <div className="w-[278px]">
-              <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
-              <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
+              <div className="ms-[16px] w-full">
+              <Image
+                    className=""
+                    width={239}
+                    height={188}
+                    src="/portfoliokebunraya.svg"
+                    alt=""
+                  />
               </div>
           </div>
         </div>
-        <div className="bg-secondary-grey-100 p-[24px] rounded-[16px] w-[410px] ">
-          <div className="flex gap-[20px]">
-              <div className="">
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] ">
+          <div className="flex gap-[16px]">
+              <div className="w-full">
               <Image
                     className=""
-                    width={65}
-                    height={64}
-                    src="/integration.svg"
+                    width={48}
+                    height={48}
+                    src="/iconkebunraya.svg"
+                    alt=""
+                  />
+                  <h2 className="text-secondary-black text-[16px] font-notosans font-[500] leading-[28px] mt-[12px]">Kebun Raya Nusantara</h2>
+                  <p className="text-secondary-grey-500 text-[14px] font-notosans font-[400] leading-[24px] mt-[8px]">Holding Perkebunan</p>
+              </div>
+              <div className="ms-[16px] w-full">
+              <Image
+                    className=""
+                    width={239}
+                    height={188}
+                    src="/portfoliokebunraya.svg"
                     alt=""
                   />
               </div>
-              <div className="w-[278px]">
-              <h2 className="text-secondary-black text-[18px] font-notosans font-[600] leading-[28px]">Fitur E-Commerce Lengkap</h2>
-              <p className="text-secondary-grey-500 text-[16px] font-notosans font-[400] leading-[24px] mt-[16px]">Secara efektif mendukung kegiatan marketing dengan  beragam fitur bawaan yang mampu diintegrasikan.</p>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 gap-[24px]">       
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] ">
+          <div className="flex gap-[16px]">
+              <div className="w-full">
+              <Image
+                    className=""
+                    width={48}
+                    height={48}
+                    src="/iconkebunraya.svg"
+                    alt=""
+                  />
+                  <h2 className="text-secondary-black text-[16px] font-notosans font-[500] leading-[28px] mt-[12px]">Kebun Raya Nusantara</h2>
+                  <p className="text-secondary-grey-500 text-[14px] font-notosans font-[400] leading-[24px] mt-[8px]">Holding Perkebunan</p>
+              </div>
+              <div className="ms-[16px] w-full">
+              <Image
+                    className=""
+                    width={239}
+                    height={188}
+                    src="/portfoliokebunraya.svg"
+                    alt=""
+                  />
+              </div>
+          </div>
+        </div>
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] ">
+          <div className="flex gap-[16px]">
+              <div className="w-full">
+              <Image
+                    className=""
+                    width={48}
+                    height={48}
+                    src="/iconkebunraya.svg"
+                    alt=""
+                  />
+                  <h2 className="text-secondary-black text-[16px] font-notosans font-[500] leading-[28px] mt-[12px]">Kebun Raya Nusantara</h2>
+                  <p className="text-secondary-grey-500 text-[14px] font-notosans font-[400] leading-[24px] mt-[8px]">Holding Perkebunan</p>
+              </div>
+              <div className="ms-[16px] w-full">
+              <Image
+                    className=""
+                    width={239}
+                    height={188}
+                    src="/portfoliokebunraya.svg"
+                    alt=""
+                  />
+              </div>
+          </div>
+        </div>
+        <div className="bg-secondary-grey-100 border-[1px] border-secondary-grey-200 p-[24px] rounded-[16px] ">
+          <div className="flex gap-[16px]">
+              <div className="">
+              <Image
+                    className=""
+                    width={48}
+                    height={48}
+                    src="/iconkebunraya.svg"
+                    alt=""
+                  />
+                  <h2 className="text-secondary-black text-[16px] font-notosans font-[500] leading-[28px] mt-[12px]">Kebun Raya Nusantara</h2>
+                  <p className="text-secondary-grey-500 text-[14px] font-notosans font-[400] leading-[24px] mt-[8px]">Holding Perkebunan</p>
+              </div>
+              <div className="ms-[16px] min-w-[240px]">
+              <Image
+                    className=""
+                    width={239}
+                    height={188}
+                    src="/portfoliokebunraya.svg"
+                    alt=""
+                  />
               </div>
           </div>
         </div>
