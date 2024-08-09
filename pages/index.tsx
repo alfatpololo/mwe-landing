@@ -5,6 +5,8 @@ import Copywriting from "@/components/tabs/copywriting";
 import Companyprofile from "@/components/tabs/companyprofile";
 import Webdesign from "@/components/tabs/webdesign";
 import Tabbutton from "@/components/navigation/tabs-button/tabsbutton";
+import DropdownButton from "@/components/navigation/collapsebutton/collapsebuttons";
+import Navbar from "@/components/navigation/navbar";
 
 export default function Home() {
   return (
@@ -121,9 +123,11 @@ export default function Home() {
 
       </div>
     </section>
-
+    <Navbar />
     <section id="sectionone">
-      <div className="mt-[192px]"></div>
+      <div className="mt-[192px]">
+      
+      </div>
       <Tabbutton />
     </section>
 
@@ -399,6 +403,31 @@ export default function Home() {
                   />
               </div>
           </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section id="sectionthree">
+    <div className="container mx-auto justify-center px-[80] py-[182px]">
+      <div className="grid grid-cols-1 gap-[24px] mb-[40px]">
+        <div className="w-full">
+            <h2 className="text-secondary-black text-center text-[32px] font-notosans font-[600] leading-[52px]">Kisah Sukses Mereka Bersama Kami</h2>
+            </div>
+      </div>
+      <div className="grid grid-cols-2 gap-[24px] mb-[24px]">       
+        <div className="p-[24px] rounded-[16px]">
+        <div className="aspect-w-16 aspect-h-9">
+        <iframe className="rounded-[16px]" width="624" height="400" src="https://www.youtube.com/embed/6WeFmf41x2w" title="MakeWebEasy Indonesia Testimonial from Jeremy Rusli (Eaton Indonesia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+</div>
+        </div>
+        <div className="p-[24px] rounded-[16px]">
+        <div className="p-4">
+      <DropdownButton 
+      label="Namico">
+        <p>MWE memiliki portfolio yang mengesankan dari testimonial positif dari klien-klien sebelumnya. Kami percaya bawah tim MWE memiliki keahlian yang dibutuhkan untuk menciptakan website perusahaan yang sesuai dengan visi dan misi kami</p>
+      </DropdownButton>
+    </div>
         </div>
       </div>
     </div>
