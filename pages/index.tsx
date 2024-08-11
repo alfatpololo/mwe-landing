@@ -11,124 +11,108 @@ import Navbar from "@/components/navigation/navbar";
 export default function Home() {
   return (
     <>
-    <section id="hero" className="flex flex-wrap justify-center lg:bg-bg-hero bg-bg-hero-mobile w-full bg-no-repeat lg:bg-cover bg-contain lg:h-[800px] lg:w-full overflow-hidden">
-      <div className="">
-        <div className="lg:flex flex-wrap justify-center">
-        <div className="lg:grid lg:grid-cols-2 relative">
-          <div className="lg:pt-[248px] hidden lg:block">
-            <h1 className="font-notosans lg:w-[560px] text-secondary-white lg:text-[48px] font-[700] lg:leading-[64px]">Jasa Pembuatan <br/> Website E-Commerce Lengkap dan Company <br/> Profile Profesional</h1>
-            <p className="text-[18px] mt-[28px] text-secondary-white font-notosans font-[400] leading-[32px] lg:w-[560px]">Tingkatkan Penjualan Toko Online Dengan <span className="font-[700]">Platform Terintegrasi dari MakeWebEasy.</span></p>
-            <p className="text-[18px] mt-[16px] text-secondary-white font-notosans font-[400] leading-[32px] lg:w-[560px]">Tingkatkan Juga Branding Perusahaan yang Lebih Profesional dengan <span className="font-[700]">Ratusan Template Keren dan Menarik dari <br /> MakeWebEasy.</span></p>
-          </div>
-          <div className="w-full hidden lg:flex">
-          <div className="lg:pt-[208px] z-[1]">
+    <Navbar />
+
+    <section id="hero" className="lg:bg-bg-hero w-full bg-no-repeat lg:bg-cover bg-contain">
+    <div className="container mx-auto justify-center py-[248px] ">
+      <div className="grid grid-cols-2 gap-[24px] mb-[28px]">
+      <div className="w-full py-[0px]">
+            <h2 className="text-secondary-white text-[48px] font-notosans font-[600] leading-[64px]">Jasa Pembuatan <br /> Website E-Commerce <br /> Lengkap dan Company <br /> Profile Profesional</h2>
+            <p className="text-secondary-white text-[18px] font-notosans font-[400] leading-[32px] mt-[32px]">Tingkatkan Penjualan Toko Online Dengan
+            <br /> <span className="font-[700]">Platform Terintegrasi dari MakeWebEasy.</span> </p>
+            <p className="text-secondary-white text-[18px] font-notosans font-[400] leading-[32px] mt-[16px]">Tingkatkan Juga Branding Perusahaan yang Lebih <br />
+            Profesional dengan
+            <span className="font-[700]"> Ratusan Template Keren dan <br />
+            Menarik dari MakeWebEasy.</span> </p>
+        </div>
+        <div className="w-full">
+          <div className="flex gap-[8px]">
+          <div className="">
           <Image
                     className="lg:ms-[76px]"
-                    width={120}
-                    height={236}
+                    width={143}
+                    height={257}
                     src="/side-seo.svg"
                     alt=""
                   />
-          <Image
-                    className="lg:ms-[60px]"
-                    width={120}
-                    height={160}
+                  <Image
+                    className="lg:ms-[60px] mt-[32px]"
+                    width={128}
+                    height={168}
                     src="/slide.svg"
                     alt=""
                   />
-          </div>
-          <div className="lg:pt-[264px]">
-          <Image
-                    className="lg:ms-[18px]"
+              </div>
+              <div className="">
+              <Image
+                    className="lg:ms-[40px]"
                     width={239}
                     height={58}
                     src="/button-design.svg"
                     alt=""
                   />
-          <Image
-                    className="absolute ms-[0px]"
+                  <Image
+                    className="lg:ms-[20px]"
                     width={701}
                     height={337}
                     src="/dashboard.svg"
                     alt=""
                   />
-          <div className="flex absolute">
+                  <div className="flex absolute mt-[-50px] ms-[12px]">
           <Image
-                    className="ms-[20px] mt-[282px]"
+                    className="ms-[20px]"
                     width={358}
                     height={198}
                     src="/chart.svg"
                     alt=""
                   />
           <Image
-                    className="ms-[20px] mt-[292px]"
+                    className="ms-[16px]"
                     width={136}
                     height={176}
                     src="/color.svg"
                     alt=""
                   />
           </div>
-          </div>
-          </div>
-          <div className="w-full lg:hidden flex">
-          <div className="lg:pt-[208px] pt-[100px] z-[1]">
-          <Image
-                    className="ms-[60px] absolute"
-                    width={91}
-                    height={157}
-                    src="/s-side-seo.svg"
-                    alt=""
-                  />
-          <Image
-                    className="lg:ms-[60px] absolute mt-[165px] ms-[55px]"
-                    width={76}
-                    height={100}
-                    src="/s-slide.svg"
-                    alt=""
-                  />
-          </div>
-          <div className="lg:pt-[264px] pt-[115px]">
-          <Image
-                    className="ms-[156px]"
-                    width={128}
-                    height={26}
-                    src="/s-button-design.svg"
-                    alt=""
-                  />
-          <Image
-                    className="absolute ms-[137px]"
-                    width={701}
-                    height={337}
-                    src="/dashboard.svg"
-                    alt=""
-                  />
-          <div className="">
-          <Image
-                    className="absolute lg:ms-[20px] ms-[155px] mt-[128px] lg:mt-[282px]"
-                    width={217}
-                    height={1123}
-                    src="/s-chart.svg"
-                    alt=""
-                  />
-          </div>
-          </div>
-          </div>
-          <div className="lg:mt-[260px] relative mt-[320px] lg:ps-[120px] lg:pt-[248px] lg:hidden block px-[24px]">
-            <h1 className="font-notosans lg:w-[560px] text-secondary-black text-[26px] font-[700] lg:leading-[64px]">Jasa Pembuatan <br/> Website E-Commerce Lengkap dan Company <br/> Profile Profesional</h1>
-            <p className="text-[16px] mt-[28px] text-secondary-grey-500 font-notosans font-[400] leading-[32px] lg:w-[560px]">Tingkatkan Penjualan Toko Online Dengan <span className="font-[700]">Platform Terintegrasi dari MakeWebEasy.</span></p>
-            <p className="text-[16px] mt-[16px] text-secondary-grey-500 font-notosans font-[400] leading-[32px] lg:w-[560px]">Tingkatkan Juga Branding Perusahaan yang Lebih Profesional dengan <span className="font-[700]">Ratusan Template Keren dan Menarik dari <br /> MakeWebEasy.</span></p>
-          </div>
-        </div>
-        </div>
 
+              </div>
+          </div>
+          {/* <div className="flex gap-[8px] mt-[8px]">
+              <div className="">
+              <Image
+                    className=""
+                    width={444}
+                    height={260}
+                    src="/banner-webdesign.svg"
+                    alt=""
+                  />
+              </div>
+              <div className="">
+              <Image
+                    className=""
+                    width={160}
+                    height={140}
+                    src="/icon.svg"
+                    alt=""
+                  />
+              <Image
+                    className="mt-[8px]"
+                    width={160}
+                    height={112}
+                    src="/responsive.svg"
+                    alt=""
+                  />
+              </div>
+          </div> */}
+        </div>
       </div>
+    </div>
     </section>
-    <Navbar />
+
     <section id="sectionone">
       <div className="mt-[192px]">
-      
-      </div>
       <Tabbutton />
+      </div>
     </section>
 
     <section id="sectiontwo">
@@ -415,9 +399,9 @@ export default function Home() {
             <h2 className="text-secondary-black text-center text-[32px] font-notosans font-[600] leading-[52px]">Kisah Sukses Mereka Bersama Kami</h2>
             </div>
       </div>
-      <div className="grid grid-cols-2 gap-[24px] mb-[24px]">       
+      <div className="grid grid-cols-2 gap-[32px] mb-[24px]">       
         <div className="p-[24px] rounded-[16px]">
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="">
         <iframe className="rounded-[16px]" width="624" height="400" src="https://www.youtube.com/embed/6WeFmf41x2w" title="MakeWebEasy Indonesia Testimonial from Jeremy Rusli (Eaton Indonesia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
         </div>

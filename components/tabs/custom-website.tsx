@@ -5,7 +5,7 @@ export default function Customwebsite() {
     return (
         <section id="customWebsite">
       <div className="bg-tabs-003">
-    <div className="container mx-auto justify-center py-[248px] mt-[192px] ">
+    <div className="container mx-auto justify-center py-[248px] mt-[192px]">
       <div className="grid grid-cols-2 gap-[24px] mb-[28px]">
         <div className="w-full">
           <div className="flex gap-[8px]">
