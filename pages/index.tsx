@@ -400,17 +400,21 @@ export default function Home() {
             </div>
       </div>
       <div className="grid grid-cols-2 gap-[32px] mb-[24px]">       
-        <div className="p-[24px] rounded-[16px]">
+        <div className="">
         <div className="">
         <iframe className="rounded-[16px]" width="624" height="400" src="https://www.youtube.com/embed/6WeFmf41x2w" title="MakeWebEasy Indonesia Testimonial from Jeremy Rusli (Eaton Indonesia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
         </div>
-        <div className="p-[24px] rounded-[16px]">
-        <div className="p-4">
-      <DropdownButton 
-      label="Namico">
-        <p>MWE memiliki portfolio yang mengesankan dari testimonial positif dari klien-klien sebelumnya. Kami percaya bawah tim MWE memiliki keahlian yang dibutuhkan untuk menciptakan website perusahaan yang sesuai dengan visi dan misi kami</p>
-      </DropdownButton>
+        <div className="">
+        <div className="">
+        <div className="">
+      <DropdownButton
+        icon="/path/to/icon.png"
+        title="Namico"
+        description="MWE memiliki portfolio yang mengesankan dari testimonial positif dari klien-klien sebelumnya. Kami percaya bawah tim MWE memiliki keahlian yang dibutuhkan untuk menciptakan website perusahaan yang sesuai dengan visi dan misi kami"
+        website="https://example.com"
+      />
+    </div>
     </div>
         </div>
       </div>
