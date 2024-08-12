@@ -1,7 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const ScrollingImages: React.FC = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   const images = [
     { src: "/coocaa.svg", alt: "Coocaa", width: 200, height: 72 },
     { src: "/aica.svg", alt: "Aica", width: 88, height: 72 },
@@ -16,35 +18,53 @@ const ScrollingImages: React.FC = () => {
           key={rowIndex}
           className={`overflow-hidden relative ${rowIndex % 2 === 0 ? "ltr" : "rtl"}`}
         >
-          <div className="flex gap-[32px] animate-scroll whitespace-nowrap">
+          <div className={`flex gap-[32px] whitespace-nowrap animate-scroll`}>
             {images.map((image, index) => (
               <div
-                key={index}
-                className="relative flex-shrink-0"
-                style={{ width: image.width, height: image.height }}
+                key={`${rowIndex}-${index}`}
+                className="relative flex-shrink-0 transition-transform"
+                style={{
+                  width: image.width,
+                  height: image.height,
+                  animationDuration: hoveredIndex === `${rowIndex}-${index}` ? "20s" : "10s",
+                  animationPlayState: hoveredIndex === `${rowIndex}-${index}` ? "paused" : "running",
+                }}
+                onMouseEnter={() => setHoveredIndex(`${rowIndex}-${index}`)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
                 <Image
                   width={image.width}
                   height={image.height}
                   src={image.src}
                   alt={image.alt}
-                  className="grayscale hover:grayscale-0 object-cover"
+                  className={`object-cover transition-all duration-300 ${
+                    hoveredIndex === `${rowIndex}-${index}` ? "grayscale-0" : "grayscale"
+                  }`}
                 />
               </div>
             ))}
             {/* Duplicate for smooth looping */}
             {images.map((image, index) => (
               <div
-                key={`dup-${index}`}
-                className="relative flex-shrink-0"
-                style={{ width: image.width, height: image.height }}
+                key={`dup-${rowIndex}-${index}`}
+                className="relative flex-shrink-0 transition-transform"
+                style={{
+                  width: image.width,
+                  height: image.height,
+                  animationDuration: hoveredIndex === `${rowIndex}-${index}` ? "20s" : "10s",
+                  animationPlayState: hoveredIndex === `${rowIndex}-${index}` ? "paused" : "running",
+                }}
+                onMouseEnter={() => setHoveredIndex(`${rowIndex}-${index}`)}
+                onMouseLeave={() => setHoveredIndex(null)}
               >
                 <Image
                   width={image.width}
                   height={image.height}
                   src={image.src}
                   alt={image.alt}
-                  className="grayscale hover:grayscale-0 object-cover"
+                  className={`object-cover transition-all duration-300 ${
+                    hoveredIndex === `${rowIndex}-${index}` ? "grayscale-0" : "grayscale"
+                  }`}
                 />
               </div>
             ))}
@@ -58,12 +78,12 @@ const ScrollingImages: React.FC = () => {
             transform: translateX(0%);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
         }
         @keyframes scroll-rtl {
           0% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
           100% {
             transform: translateX(0%);
@@ -71,11 +91,11 @@ const ScrollingImages: React.FC = () => {
         }
 
         .ltr .animate-scroll {
-          animation: scroll-ltr 20s linear infinite;
+          animation: scroll-ltr 10s linear infinite;
         }
 
         .rtl .animate-scroll {
-          animation: scroll-rtl 20s linear infinite;
+          animation: scroll-rtl 10s linear infinite;
         }
       `}</style>
     </div>
