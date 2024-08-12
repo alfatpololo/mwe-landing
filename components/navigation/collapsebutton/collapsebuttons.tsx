@@ -1,37 +1,47 @@
-import { useState, ReactNode } from "react";
+import { useState } from "react";
+import Image from "next/image";
 
 interface DropdownButtonProps {
   icon: string;
+  iconwidth: number;
+  iconheight: number;
   title: string;
   description: string;
   website: string;
-  children?: ReactNode;
+  webtitle: string;
+  isOpen: boolean;
+  onClick: () => void;
 }
 
 const DropdownButton: React.FC<DropdownButtonProps> = ({
   icon,
+  iconwidth,
+  iconheight,
   title,
   description,
   website,
-  children,
+  webtitle,
+  isOpen,
+  onClick,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full mx-auto">
       <button
-        onClick={toggleDropdown}
-        className={`flex justify-between items-center w-full p-2 border border-gray-300 text-gray-700 hover:bg-gray-50 focus:outline-none rounded-t-md ${
-          isOpen ? "rounded-b-none" : "rounded-md"
+        onClick={onClick}
+        className={`flex justify-between border-l-[8px] items-center w-full p-2 border border-primary-blue px-[24px] py-[26px] text-gray-700 rounded-t-md ${
+          isOpen ? "rounded-b-none border-b-transparent" : "rounded-md"
         }`}
       >
-        <div className="flex items-center">
-          <img src={icon} alt={`${title} icon`} className="w-5 h-5 mr-2" />
-          <span>{title}</span>
+        <div className="flex items-center gap-[16px]">
+          <Image
+            width={iconwidth}
+            height={iconheight}
+            src={icon}
+            alt=""
+          />
+          <span className="text-secondary-black font-notosans font-[500] text-[18px]">
+            {title}
+          </span>
         </div>
         <span className="ml-2">
           {isOpen ? (
@@ -69,23 +79,101 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
       </button>
 
       {isOpen && (
-        <div className="border border-t-0 border-gray-300 rounded-b-md p-4">
-          <p className="text-gray-700">{description}</p>
+        <div className="border border-t-0 border-l-[8px] border-primary-blue rounded-b-md px-[24px] mt-[-1px] pt-[12px] pb-[16px]">
+          <p className="font-notosans font-[400] text-[16px] text-secondary-grey-500">
+            {description}
+          </p>
           <div className="text-right mt-4">
             <a
               href={website}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
+              className="text-primary-blue font-notosans font-[500] hover:underline"
             >
-              Visit Website
+              {webtitle}
             </a>
           </div>
-          {children}
         </div>
       )}
     </div>
   );
 };
 
-export default DropdownButton;
+const DropdownList: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleDropdown = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <div
+      className="grid gap-[16px] max-h-[400px] overflow-y-scroll"
+      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+    >
+      <style jsx>{`
+        div::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
+      <DropdownButton
+        icon="/company-icon.svg"
+        iconwidth={48}
+        iconheight={48}
+        title="Namico"
+        description="MWE memiliki portfolio yang mengesankan dari testimonial positif dari klien-klien sebelumnya. Kami percaya bawah tim MWE memiliki keahlian yang dibutuhkan untuk menciptakan website perusahaan yang sesuai dengan visi dan misi kami."
+        website="https://www.namico.com"
+        webtitle="www.namico.com"
+        isOpen={activeIndex === 0}
+        onClick={() => toggleDropdown(0)}
+      />
+      <DropdownButton
+        icon="/company-icon.svg"
+        iconwidth={48}
+        iconheight={48}
+        title="Other Company"
+        description="Deskripsi lain tentang perusahaan ini. Tim MWE memiliki kemampuan yang luar biasa dalam menciptakan website yang sempurna."
+        website="https://www.othercompany.com"
+        webtitle="www.othercompany.com"
+        isOpen={activeIndex === 1}
+        onClick={() => toggleDropdown(1)}
+      />
+      <DropdownButton
+        icon="/company-icon.svg"
+        iconwidth={48}
+        iconheight={48}
+        title="Another Company"
+        description="Deskripsi tambahan tentang perusahaan lain yang juga memiliki portofolio yang mengesankan."
+        website="https://www.anothercompany.com"
+        webtitle="www.anothercompany.com"
+        isOpen={activeIndex === 2}
+        onClick={() => toggleDropdown(2)}
+      />
+      <DropdownButton
+        icon="/company-icon.svg"
+        iconwidth={48}
+        iconheight={48}
+        title="Another Company"
+        description="Deskripsi tambahan tentang perusahaan lain yang juga memiliki portofolio yang mengesankan."
+        website="https://www.anothercompany.com"
+        webtitle="www.anothercompany.com"
+        isOpen={activeIndex === 3}
+        onClick={() => toggleDropdown(3)}
+      />
+      <DropdownButton
+        icon="/company-icon.svg"
+        iconwidth={48}
+        iconheight={48}
+        title="Another Company"
+        description="Deskripsi tambahan tentang perusahaan lain yang juga memiliki portofolio yang mengesankan."
+        website="https://www.anothercompany.com"
+        webtitle="www.anothercompany.com"
+        isOpen={activeIndex === 4}
+        onClick={() => toggleDropdown(4)}
+      />
+      {/* Tambahkan dropdown lainnya sesuai kebutuhan */}
+    </div>
+  );
+};
+
+export default DropdownList;

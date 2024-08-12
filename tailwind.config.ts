@@ -13,7 +13,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "bg-hero": "url('/bg.png')",
-        "bg-hero-mobile": "url('/bg-mobile.png')"
+        "bg-hero-mobile": "url('/bg-mobile.png')",
+        "bg-client": "url('/bg-client.png')"
       },
       colors: {
         primary: {

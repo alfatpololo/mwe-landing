@@ -7,6 +7,7 @@ import Webdesign from "@/components/tabs/webdesign";
 import Tabbutton from "@/components/navigation/tabs-button/tabsbutton";
 import DropdownButton from "@/components/navigation/collapsebutton/collapsebuttons";
 import Navbar from "@/components/navigation/navbar";
+import ScrollingImages from "@/components/scrollingimage";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
             <span className="font-[700]"> Ratusan Template Keren dan <br />
             Menarik dari MakeWebEasy.</span> </p>
         </div>
-        <div className="w-full">
+        <div className="w-full ms-[-70px]">
           <div className="flex gap-[8px]">
           <div className="">
           <Image
@@ -399,24 +400,30 @@ export default function Home() {
             <h2 className="text-secondary-black text-center text-[32px] font-notosans font-[600] leading-[52px]">Kisah Sukses Mereka Bersama Kami</h2>
             </div>
       </div>
-      <div className="grid grid-cols-2 gap-[32px] mb-[24px]">       
+      <div className="grid grid-cols-2 w-full gap-[32px] mb-[24px]">       
         <div className="">
         <div className="">
         <iframe className="rounded-[16px]" width="624" height="400" src="https://www.youtube.com/embed/6WeFmf41x2w" title="MakeWebEasy Indonesia Testimonial from Jeremy Rusli (Eaton Indonesia)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
 </div>
         </div>
         <div className="">
+        <div className="grid gap-[16px]">
         <div className="">
-        <div className="">
-      <DropdownButton
-        icon="/path/to/icon.png"
-        title="Namico"
-        description="MWE memiliki portfolio yang mengesankan dari testimonial positif dari klien-klien sebelumnya. Kami percaya bawah tim MWE memiliki keahlian yang dibutuhkan untuk menciptakan website perusahaan yang sesuai dengan visi dan misi kami"
-        website="https://example.com"
-      />
+      <DropdownButton />
     </div>
     </div>
         </div>
+      </div>
+    </div>
+    </section>
+
+    <section className="bg-bg-client bg-auto h-[800px] bg-no-repeat bg-left-bottom" id="sectionfour">
+    <div className="container mx-auto justify-center px-[80] pt-[52px]">
+      <div className="grid grid-cols-2 gap-[24px] mb-[28px]">
+        <div className="w-[456px]">
+            <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Telah Dipercaya Oleh <br /> Lebih dari 5000+ Bisnis</h2>
+        </div>
+        <ScrollingImages />
       </div>
     </div>
     </section>
