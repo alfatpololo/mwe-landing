@@ -2,7 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 const ScrollingImages: React.FC = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);
 
   const images = [
     { src: "/coocaa.svg", alt: "Coocaa", width: 200, height: 72 },
@@ -91,11 +91,11 @@ const ScrollingImages: React.FC = () => {
         }
 
         .ltr .animate-scroll {
-          animation: scroll-ltr 10s linear infinite;
+          animation: scroll-ltr 30s linear infinite;
         }
 
         .rtl .animate-scroll {
-          animation: scroll-rtl 10s linear infinite;
+          animation: scroll-rtl 30s linear infinite;
         }
       `}</style>
     </div>

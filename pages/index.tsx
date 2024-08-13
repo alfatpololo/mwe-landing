@@ -8,8 +8,13 @@ import Tabbutton from "@/components/navigation/tabs-button/tabsbutton";
 import DropdownButton from "@/components/navigation/collapsebutton/collapsebuttons";
 import Navbar from "@/components/navigation/navbar";
 import ScrollingImages from "@/components/scrollingimage";
+import { useState } from "react";
+import ServiceTagSelector from "@/components/tags/activetags";
 
 export default function Home() {
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+  const services = ["Website E-Commerce", "Web Design", "Website Company Profile", "Website Custom"];
   return (
     <>
     <Navbar />
@@ -424,6 +429,26 @@ export default function Home() {
             <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Telah Dipercaya Oleh <br /> Lebih dari 5000+ Bisnis</h2>
         </div>
         <ScrollingImages />
+      </div>
+    </div>
+    </section>
+
+    <section className="pt-[175px]" id="sectionfour">
+    <div className="container mx-auto justify-center px-[80] pt-[52px]">
+      <div className="flex mb-[28px]">
+        <div className="w-full">
+            <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Hubungi MakeWebEasy Untuk Konsultasi Selengkapnya!</h2>
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-[32px]">
+      <div className="flex flex-col">
+      <h1 className="text-xl font-bold mb-4">Select Your Services:</h1>
+      <ServiceTagSelector
+        options={services}
+        selectedOptions={selectedServices}
+        onChange={setSelectedServices}
+      />
+    </div>
       </div>
     </div>
     </section>
