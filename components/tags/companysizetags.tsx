@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-interface ServiceTagProps {
+interface CompanySizeTagProps {
   label: string;
   selected: boolean;
   onSelect: () => void;
 }
 
-const ServiceTag: React.FC<ServiceTagProps> = ({
+const CompanySizeTag: React.FC<CompanySizeTagProps> = ({
   label,
   selected,
   onSelect,
@@ -23,32 +23,32 @@ const ServiceTag: React.FC<ServiceTagProps> = ({
   );
 };
 
-interface ServiceTagSelectorProps {
+interface CompanySizeSelectorProps {
   options: string[];
-  selectedOptions: string[];
-  onChange: (selected: string[]) => void;
+  selectedOption: string | null;
+  onChange: (selected: string) => void;
 }
 
-const ServiceTagSelector: React.FC<ServiceTagSelectorProps> = ({
+const CompanySizeSelector: React.FC<CompanySizeSelectorProps> = ({
   options,
-  selectedOptions,
+  selectedOption,
   onChange,
 }) => {
   const handleSelect = (option: string) => {
-    if (selectedOptions.includes(option)) {
-      onChange(selectedOptions.filter((item) => item !== option));
+    if (selectedOption === option) {
+      onChange(""); // Reset selection if the same option is clicked
     } else {
-      onChange([...selectedOptions, option]);
+      onChange(option); // Select a new option
     }
   };
 
   return (
     <div className="flex flex-wrap gap-[16px]">
       {options.map((option) => (
-        <ServiceTag
+        <CompanySizeTag
           key={option}
           label={option}
-          selected={selectedOptions.includes(option)}
+          selected={selectedOption === option}
           onSelect={() => handleSelect(option)}
         />
       ))}
@@ -56,4 +56,4 @@ const ServiceTagSelector: React.FC<ServiceTagSelectorProps> = ({
   );
 };
 
-export default ServiceTagSelector;
+export default CompanySizeSelector;

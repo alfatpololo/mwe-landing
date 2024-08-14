@@ -10,8 +10,23 @@ import Navbar from "@/components/navigation/navbar";
 import ScrollingImages from "@/components/scrollingimage";
 import { useState } from "react";
 import ServiceTagSelector from "@/components/tags/activetags";
+import CompanySizeSelector from "@/components/tags/companysizetags";
+import ContactForm from "@/components/form/form";
 
 export default function Home() {
+  const [selectedCompanySize, setSelectedCompanySize] = useState<string | null>(
+    null
+  );
+
+  const companySizes = [
+    "1-10 Employees",
+    "11-50 Employees",
+    "51-200 Employees",
+    "201-500 Employees",
+    "501-1000 Employees",
+    "1001+ Employees",
+  ];
+
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
   const services = ["Website E-Commerce", "Web Design", "Website Company Profile", "Website Custom"];
@@ -435,21 +450,30 @@ export default function Home() {
 
     <section className="pt-[175px]" id="sectionfour">
     <div className="container mx-auto justify-center px-[80] pt-[52px]">
-      <div className="flex mb-[28px]">
+      <div className="flex mb-[56px]">
         <div className="w-full">
             <h2 className="text-secondary-black text-[32px] font-notosans font-[600] leading-[52px]">Hubungi MakeWebEasy Untuk Konsultasi Selengkapnya!</h2>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-[32px]">
       <div className="flex flex-col">
-      <h1 className="text-xl font-bold mb-4">Select Your Services:</h1>
+      <h1 className="font-notosans text-[16px] font-[400] text-secondary-grey-500 mb-[16px]">Layanan</h1>
       <ServiceTagSelector
         options={services}
         selectedOptions={selectedServices}
         onChange={setSelectedServices}
       />
     </div>
+    <div className="flex flex-col">
+      <h1 className="font-notosans text-[16px] font-[400] text-secondary-grey-500 mb-[16px]">Ukuran perusahaan</h1>
+      <CompanySizeSelector
+        options={companySizes}
+        selectedOption={selectedCompanySize}
+        onChange={setSelectedCompanySize}
+      />
+    </div>
       </div>
+      <ContactForm />
     </div>
     </section>
     </>
