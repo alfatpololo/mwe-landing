@@ -5,8 +5,8 @@ export default function Ecommerce() {
     return (
         <section id="eCommerce">
       <div className="bg-tabs-001">
-    <div className="container mx-auto justify-center py-[248px] mt-[192px] ">
-      <div className="grid grid-cols-2 gap-[24px] mb-[28px]">
+    <div className="lg:container lg:mx-auto lg:justify-center lg:py-[248px] pt-[157px] pb-[77px] lg:pb-0 lg:mt-[192px] ">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[28px]">
         <div className="w-full">
           <div className="flex gap-[8px]">
               <div className="">
@@ -18,7 +18,7 @@ export default function Ecommerce() {
                     alt=""
                   />
               </div>
-              <div className="">
+              <div className="hidden lg:flex">
               <Image
                     className=""
                     width={160}
@@ -35,7 +35,7 @@ export default function Ecommerce() {
                   />
               </div>
           </div>
-          <div className="flex gap-[8px] mt-[8px]">
+          <div className="gap-[8px] mt-[8px] hidden lg:flex">
               <div className="">
               <Image
                     className=""

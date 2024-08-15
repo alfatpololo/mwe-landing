@@ -4,6 +4,8 @@ import "react-phone-input-2/lib/style.css";
 import { useForm, SubmitHandler } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import Image from "next/image";
+import arrowIcon from "@/public/arrow.svg"; // Import the arrow icon
 
 // Define the form data type
 interface FormData {
@@ -66,7 +68,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="">
+    <form onSubmit={handleSubmit(onSubmit)} className="pb-[175px]">
       <div className="flex space-x-[32px] pt-[72px]">
         <div className="flex-1">
           <input
@@ -131,12 +133,21 @@ export default function ContactForm() {
         )}
       </div>
 
-      <button
-        type="submit"
-        className="absolute right-0 bg-blue-500 text-white p-3 rounded mt-4 hover:bg-blue-600"
-      >
-        Submit
-      </button>
+      <div className="flex justify-end mt-4">
+        <button
+          type="submit"
+          className="bg-primary-blue text-white p-3 rounded-[24px] flex items-center px-[24px]"
+        >
+          Hubungi kami sekarang
+          <Image
+            src={arrowIcon}
+            alt="Arrow Icon"
+            width={20}
+            height={20}
+            className="ml-2"
+          />
+        </button>
+      </div>
     </form>
   );
 }

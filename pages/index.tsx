@@ -12,6 +12,7 @@ import { useState } from "react";
 import ServiceTagSelector from "@/components/tags/activetags";
 import CompanySizeSelector from "@/components/tags/companysizetags";
 import ContactForm from "@/components/form/form";
+import Footer from "@/components/footer/footer";
 
 export default function Home() {
   const [selectedCompanySize, setSelectedCompanySize] = useState<string | null>(
@@ -34,7 +35,7 @@ export default function Home() {
     <>
     <Navbar />
 
-    <section id="hero" className="lg:bg-bg-hero w-full bg-no-repeat lg:bg-cover bg-contain">
+    {/* <section id="hero" className="lg:bg-bg-hero w-full bg-no-repeat lg:bg-cover bg-contain">
     <div className="container mx-auto justify-center py-[248px] ">
       <div className="grid grid-cols-2 gap-[24px] mb-[28px]">
       <div className="w-full py-[0px]">
@@ -98,37 +99,10 @@ export default function Home() {
 
               </div>
           </div>
-          {/* <div className="flex gap-[8px] mt-[8px]">
-              <div className="">
-              <Image
-                    className=""
-                    width={444}
-                    height={260}
-                    src="/banner-webdesign.svg"
-                    alt=""
-                  />
-              </div>
-              <div className="">
-              <Image
-                    className=""
-                    width={160}
-                    height={140}
-                    src="/icon.svg"
-                    alt=""
-                  />
-              <Image
-                    className="mt-[8px]"
-                    width={160}
-                    height={112}
-                    src="/responsive.svg"
-                    alt=""
-                  />
-              </div>
-          </div> */}
         </div>
       </div>
     </div>
-    </section>
+    </section> */}
 
     <section id="sectionone">
       <div className="mt-[192px]">
@@ -136,7 +110,7 @@ export default function Home() {
       </div>
     </section>
 
-    <section id="sectiontwo">
+    {/* <section id="sectiontwo">
     <div className="container mx-auto justify-center px-[80] pt-[182px]">
       <div className="grid grid-cols-3 gap-[24px] mb-[28px]">
         <div className="w-[456px]">
@@ -476,6 +450,9 @@ export default function Home() {
       <ContactForm />
     </div>
     </section>
+
+    <Footer /> */}
+
     </>
   );
 }

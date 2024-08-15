@@ -107,9 +107,9 @@ export default function Tabs() {
   };
 
   return (
-    <div className="relative">
+    <div className="lg:relative">
       <div className={`p-4 ${getBackgroundClass()}`}>{renderComponent()}</div>
-      <div className="flex space-x-0 justify-center mt-[-70px] bottom-0 w-full">
+      <div className="flex lg:space-x-0 lg:justify-center mt-[-70px] bottom-0 w-full">
         <button
           className={`${getTabClass("Ecommerce")} ${getTextClass("Ecommerce")}`}
           onClick={() => setActiveTab("Ecommerce")}
