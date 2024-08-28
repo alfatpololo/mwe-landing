@@ -105,7 +105,7 @@ export default function Home() {
     </section> */}
 
     <section id="sectionone">
-      <div className="mt-[192px]">
+      <div className="lg:mt-[192px]">
       <Tabbutton />
       </div>
     </section>
