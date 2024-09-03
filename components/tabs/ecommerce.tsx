@@ -56,9 +56,9 @@ export default function Ecommerce() {
               </div>
           </div>
         </div>
-        <div className="w-full py-[80px]">
-            <h2 className="text-secondary-white text-[32px] font-notosans font-[600] leading-[52px]">Buat Website E-Commerce Siap Jualan dengan Berbagai Fitur Terintegrasi</h2>
-            <p className="text-secondary-white text-[18px] font-notosans font-[400] leading-[32px] mt-[16px]">Tingkatkan Penjualan Toko Online Kamu dengan <span className="font-[700]">Platform Terintegrasi dari MakeWebEasy.</span> <span className="block mt-[16px]"> Nikmati 100% Keuntungan Tanpa Ada Potongan Komisi Tambahan. Siap <br /> Jualan Makin Cuan? Yuk, Cobain MakeWebEasy Sekarang!  </span></p>
+        <div className="order-2 lg:order-2 w-full text-start lg:text-left pt-[40px] pb-[77px] lg:pt-0 lg:pb-0 lg:py-[80px]">
+            <h2 className="text-secondary-white text-[24px] lg:text-[32px] font-notosans font-[600] leading-[40px] lg:leading-[52px]">Buat Website E-Commerce Siap Jualan dengan Berbagai Fitur Terintegrasi</h2>
+            <p className="text-secondary-white text-[16px] lg:text-[18px] font-notosans font-[400] leading-[28px] lg:leading-[32px] mt-[16px]">Tingkatkan Penjualan Toko Online Kamu dengan <span className="font-[700]">Platform Terintegrasi dari MakeWebEasy.</span> <span className="block mt-[16px]"> Nikmati 100% Keuntungan Tanpa Ada Potongan Komisi Tambahan. Siap <br /> Jualan Makin Cuan? Yuk, Cobain MakeWebEasy Sekarang!  </span></p>
         </div>
       </div>
     </div>

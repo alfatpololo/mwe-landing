@@ -35,19 +35,19 @@ export default function Home() {
     <>
     <Navbar />
 
-    {/* <section id="hero" className="lg:bg-bg-hero w-full bg-no-repeat lg:bg-cover bg-contain">
-    <div className="container mx-auto justify-center py-[248px] ">
-      <div className="grid grid-cols-2 gap-[24px] mb-[28px]">
-      <div className="w-full py-[0px]">
-            <h2 className="text-secondary-white text-[48px] font-notosans font-[600] leading-[64px]">Jasa Pembuatan <br /> Website E-Commerce <br /> Lengkap dan Company <br /> Profile Profesional</h2>
-            <p className="text-secondary-white text-[18px] font-notosans font-[400] leading-[32px] mt-[32px]">Tingkatkan Penjualan Toko Online Dengan
+    <section id="hero" className="lg:bg-bg-hero lg:w-full bg-no-repeat lg:bg-cover bg-contain bg-bg-hero-mobile">
+    <div className="lg:container lg:mx-auto lg:justify-center lg:py-[248px] py-[78px]">
+      <div className="lg:grid lg:grid-cols-2 lg:gap-[24px] lg:mb-[28px]">
+      <div className="lg:w-full py-[0px]">
+            <h2 className="lg:text-secondary-white lg:text-[48px] font-notosans font-[600] lg:leading-[64px] text-secondary-black text-[26px] leading-[38px]">Jasa Pembuatan <br /> Website E-Commerce <br /> Lengkap dan Company <br /> Profile Profesional</h2>
+            <p className="lg:text-secondary-white lg:text-[18px] font-notosans font-[400] lg:leading-[32px] mt-[32px] text-secondary-black text-[16px] leading-[24px]">Tingkatkan Penjualan Toko Online Dengan
             <br /> <span className="font-[700]">Platform Terintegrasi dari MakeWebEasy.</span> </p>
-            <p className="text-secondary-white text-[18px] font-notosans font-[400] leading-[32px] mt-[16px]">Tingkatkan Juga Branding Perusahaan yang Lebih <br />
+            <p className="lg:text-secondary-white lg:text-[18px] font-notosans font-[400] lg:leading-[32px] mt-[16px] text-secondary-black text-[16px] leading-[24px]">Tingkatkan Juga Branding Perusahaan yang Lebih <br />
             Profesional dengan
             <span className="font-[700]"> Ratusan Template Keren dan <br />
             Menarik dari MakeWebEasy.</span> </p>
         </div>
-        <div className="w-full ms-[-70px]">
+        <div className="w-full ms-[-70px] hidden lg:block">
           <div className="flex gap-[8px]">
           <div className="">
           <Image
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </div>
     </div>
-    </section> */}
+    </section>
 
     <section id="sectionone">
       <div className="lg:mt-[192px]">

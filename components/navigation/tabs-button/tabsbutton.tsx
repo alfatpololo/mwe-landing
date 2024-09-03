@@ -28,7 +28,7 @@ export default function Tabs() {
   };
 
   const getTabClass = (tabName: TabName) => {
-    const baseClasses = "lg:py-[24px] py-[12px] px-[24px] lg:px-[16px] lg:flex-1 lg:text-center lg:text-[18px] lg:font-[400] w-full lg:font-notosans";
+    const baseClasses = "lg:py-[24px] py-[12px] px-[] lg:px-[16px] lg:flex-1 lg:text-center lg:text-[18px] lg:font-[400] w-full lg:font-notosans";
 
     const tabClasses = {
       "Ecommerce": activeTab === "Ecommerce"
@@ -40,35 +40,39 @@ export default function Tabs() {
         : activeTab === "Web Design"
         ? "rounded-tr-none"
         : "rounded-tl-[0px] rounded-tr-[8px] lg:rounded-tr-[50px]",
+      
       "Company Profile": activeTab === "Company Profile"
-        ? "rounded-br-[50px] lg:rounded-bl-[50px]"
+        ? "rounded-br-[8px] lg:rounded-br-[50px] rounded-bl-[8px] lg:rounded-bl-[50px]"
         : activeTab === "Copywriting"
         ? "rounded-tr-none"
         : activeTab === "Web Design"
         ? "rounded-tr-none"
         : activeTab === "Ecommerce"
         ? "rounded-tl-[8px] lg:rounded-tl-[50px] rounded-bl-none"
-        : "rounded-tr-[50px]",
+        : "rounded-tr-[8px] lg:rounded-tr-[50px]",
+      
       "Custom Website": activeTab === "Custom Website"
-        ? "rounded-br-[50px] rounded-bl-[50px]"
+        ? "rounded-br-[8px] lg:rounded-br-[50px] rounded-bl-[8px] lg:rounded-bl-[50px]"
         : activeTab === "Copywriting"
         ? "rounded-tr-none"
         : activeTab === "Ecommerce"
         ? "rounded-tl-[0px]"
         : activeTab === "Company Profile"
-        ? "rounded-tl-[50px] rounded-bl-none"
-        : "rounded-tr-[50px]",
+        ? "rounded-tl-[8px] lg:rounded-tl-[50px] rounded-bl-none"
+        : "rounded-tr-[8px] lg:rounded-tr-[50px]",
+      
       "Web Design": activeTab === "Web Design"
-        ? "rounded-br-[50px] rounded-bl-[50px]"
+        ? "rounded-br-[8px] lg:rounded-br-[50px] rounded-bl-[8px] lg:rounded-bl-[50px]"
         : activeTab === "Company Profile"
         ? "rounded-tl-[0px]"
         : activeTab === "Ecommerce"
         ? "rounded-tl-[0px]"
         : activeTab === "Custom Website"
-        ? "rounded-tl-[50px] rounded-bl-none"
-        : "rounded-tr-[50px]",
+        ? "rounded-tl-[8px] lg:rounded-tl-[50px] rounded-bl-none"
+        : "rounded-tr-[8px] lg:rounded-tr-[50px]",
+      
       "Copywriting": activeTab === "Copywriting"
-        ? "rounded-bl-[50px]"
+        ? "rounded-bl-[8px] lg:rounded-bl-[50px]"
         : activeTab === "Company Profile"
         ? "rounded-tl-[0px]"
         : activeTab === "Ecommerce"
@@ -76,11 +80,12 @@ export default function Tabs() {
         : activeTab === "Custom Website"
         ? "rounded-tr-none"
         : activeTab === "Web Design"
-        ? "rounded-tr-[0px] rounded-tl-[50px]"
-        : "rounded-tr-[0px]"
+        ? "rounded-tr-none lg:rounded-tr-none rounded-tl-[8px] lg:rounded-tl-[50px]"
+        : "rounded-tr-[8px] lg:rounded-tr-[50px]"
     };
+    
 
-    return `${baseClasses} ${tabClasses[tabName]} ${activeTab === tabName ? getBackgroundClass() : 'bg-white text-secondary-grey-500'}`;
+    return `${baseClasses} ${tabClasses[tabName]} ${activeTab === tabName ? getBackgroundClass() : 'bg-white pb-[20px] text-secondary-grey-500'}`;
   };
 
   const getIconClass = (tabName: TabName) =>
